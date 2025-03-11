@@ -13,4 +13,29 @@
 
 ## 🎮 Controls
 - **Q** → Switch Ability  
-- **Ctrl** → Use Ability  
+- **Ctrl** → Use Ability
+  
+---
+## 🔧 Extending the System (Adding New Abilities)  
+
+### 1️⃣ Create a New Ability Script  
+- Create a new `C# Script` that **inherits from `AbilityBase`** and **implements `UseAbility()`**.  
+
+Example:  
+```csharp
+[CreateAssetMenu(fileName = "NewExampleAbility", menuName = "Ability/Example")]
+public class ExampleAbility : AbilityBase
+{
+    public override void UseAbility()
+    {
+        Debug.Log("you use ability!");
+    }
+}
+```
+
+### 2️⃣ Create an Ability Asset
+- Right-click in the Project window → Create > Ability > Jump. 
+- Drag it into the abilities[] list in AbilityController.
+
+
+
